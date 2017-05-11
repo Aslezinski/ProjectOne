@@ -1,0 +1,32 @@
+﻿<Window x:Class="ControleDeEstoque.View.FiltrosListarSaidaDeLotes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleDeEstoque.View"
+        mc:Ignorable="d"
+        Title="FiltrosListarSaidaDeLotes" Height="212.924" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <DatePicker x:Name="DataVencimento" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <DatePicker x:Name="DataSaida" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox x:Name="Produto" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" Width="165"/>
+        <ComboBox x:Name="Usuario" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Width="165"/>
+        <Label Content="Data de vencimento" HorizontalAlignment="Right" Grid.Row="0" VerticalAlignment="Center"/>
+        <Label Content="Data de saída" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center"/>
+        <Label Content="Produto" HorizontalAlignment="Right" Grid.Row="2" VerticalAlignment="Center"/>
+        <Label Content="Usuário" HorizontalAlignment="Right" Grid.Row="3" VerticalAlignment="Center"/>
+        <Button Content="Filtrar" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="4" VerticalAlignment="Top" Width="75" Click="Filtrar"/>
+    </Grid>
+</Window>

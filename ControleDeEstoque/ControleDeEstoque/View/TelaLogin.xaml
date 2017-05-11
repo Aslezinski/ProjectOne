@@ -1,0 +1,29 @@
+﻿<Window x:Class="ControleDeEstoque.View.TelaLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleDeEstoque.View"
+        mc:Ignorable="d"
+        Title="Login" Height="300" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="Login" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="23" VerticalAlignment="Bottom" Width="120" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="Senha" Grid.Column="1" HorizontalAlignment="Left" Height="23" Grid.Row="1" VerticalAlignment="Bottom" Width="120" VerticalContentAlignment="Center"/>
+
+        <Label x:Name="LabelLogin" Content="Login" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="0"/>
+        <Label x:Name="LavelSenha" Content="Senha" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1"/>
+
+        <Button Content="Entrar" Grid.Column="1" HorizontalAlignment="Right"  Grid.Row="2" VerticalAlignment="Top" Width="75" Margin="0,10,75,0" Click="BtnLogin"/>
+        
+    </Grid>
+</Window>

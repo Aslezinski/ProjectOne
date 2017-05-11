@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A02049E5-D1BC-4A2F-949B-105F29EA76A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControleDeEstoque</RootNamespace>
+    <AssemblyName>ControleDeEstoque</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControleDeEstoqueDataSet.cs">
+      <DependentUpon>ControleDeEstoqueDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ControleDeEstoqueDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControleDeEstoqueDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\EnderecoDAO.cs" />
+    <Compile Include="DAL\TipoUsuarioDao.cs" />
+    <Compile Include="Model\UsuarioLogado.cs" />
+    <Compile Include="View\CadastrarProduto.xaml.cs">
+      <DependentUpon>CadastrarProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CadastrarUsuario.xaml.cs">
+      <DependentUpon>CadastrarUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EscolherProdutoParaEdicao.xaml.cs">
+      <DependentUpon>EscolherProdutoParaEdicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EscolherUsuarioParaEdicao.xaml.cs">
+      <DependentUpon>EscolherUsuarioParaEdicao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FiltroListarEntradaDeLotes.xaml.cs">
+      <DependentUpon>FiltroListarEntradaDeLotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FiltrosListarLotesEmEstoque.xaml.cs">
+      <DependentUpon>FiltrosListarLotesEmEstoque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FiltrosListarSaidaDeLotes.xaml.cs">
+      <DependentUpon>FiltrosListarSaidaDeLotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListarEntradaDeLotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListarEntradaDeLotes.Designer.cs">
+      <DependentUpon>ListarEntradaDeLotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListarLotesEmEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListarLotesEmEstoque.Designer.cs">
+      <DependentUpon>ListarLotesEmEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListarProdutos.Designer.cs">
+      <DependentUpon>ListarProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListarSaidaDeLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListarSaidaDeLote.Designer.cs">
+      <DependentUpon>ListarSaidaDeLote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ListarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ListarUsuarios.Designer.cs">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegistrarEntradaLote.xaml.cs">
+      <DependentUpon>RegistrarEntradaLote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegistrarSaídaLote.xaml.cs">
+      <DependentUpon>RegistrarSaídaLote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaLogin.xaml.cs">
+      <DependentUpon>TelaLogin.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\LoteController.cs" />
+    <Compile Include="Controller\ProdutoController.cs" />
+    <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="DAL\Context.cs" />
+    <Compile Include="DAL\HistoricoDAO.cs" />
+    <Compile Include="DAL\LoteDAO.cs" />
+    <Compile Include="DAL\ProdutoDAO.cs" />
+    <Compile Include="DAL\Singleton.cs" />
+    <Compile Include="DAL\UsuarioDAO.cs" />
+    <Compile Include="Model\Endereco.cs" />
+    <Compile Include="Model\Historico.cs" />
+    <Compile Include="Model\Lote.cs" />
+    <Compile Include="Model\Produto.cs" />
+    <Compile Include="Model\TipoDeRegistro.cs" />
+    <Compile Include="Model\TipoUsuario.cs" />
+    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListarEntradaDeLotes.resx">
+      <DependentUpon>ListarEntradaDeLotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListarLotesEmEstoque.resx">
+      <DependentUpon>ListarLotesEmEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListarProdutos.resx">
+      <DependentUpon>ListarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListarSaidaDeLote.resx">
+      <DependentUpon>ListarSaidaDeLote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ListarUsuarios.resx">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ReportListaEntradaLotes.rdlc" />
+    <EmbeddedResource Include="View\ReportListaLotesEmEstoque.rdlc" />
+    <EmbeddedResource Include="View\ReportListaProdutos.rdlc" />
+    <EmbeddedResource Include="View\ReportListaSaidaLote.rdlc" />
+    <EmbeddedResource Include="View\ReportListaUsuarios.rdlc" />
+    <None Include="ControleDeEstoqueDataSet.xsc">
+      <DependentUpon>ControleDeEstoqueDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ControleDeEstoqueDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ControleDeEstoqueDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ControleDeEstoqueDataSet.xss">
+      <DependentUpon>ControleDeEstoqueDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UsuarioLogado\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\CadastrarProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CadastrarUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EscolherProdutoParaEdicao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EscolherUsuarioParaEdicao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FiltroListarEntradaDeLotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FiltrosListarLotesEmEstoque.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FiltrosListarSaidaDeLotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RegistrarEntradaLote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RegistrarSaídaLote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TelaLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

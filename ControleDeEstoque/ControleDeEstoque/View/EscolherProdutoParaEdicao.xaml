@@ -1,0 +1,23 @@
+﻿<Window x:Class="ControleDeEstoque.View.EscolherProdutoParaEdicao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleDeEstoque.View"
+        mc:Ignorable="d"
+        Title="Produto para edição" Height="125" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Editar" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,0,10,0" Click="EditarProduto"/>
+        <Label Content="Produto" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+        <ComboBox x:Name="ListaDeProdutos" HorizontalAlignment="Left" VerticalAlignment="Center" Height="20" Width="206" Grid.Column="1" Grid.Row="0"/>
+
+    </Grid>
+</Window>

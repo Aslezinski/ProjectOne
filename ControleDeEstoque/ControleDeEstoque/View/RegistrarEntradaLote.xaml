@@ -1,0 +1,81 @@
+﻿<Window x:Class="ControleDeEstoque.View.RegistrarEntradaLote"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControleDeEstoque.View"
+        mc:Ignorable="d"
+        Title="Registrar entrada de lote" Height="300" Width="367.865" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="LabelDataDeFabricacao" Content="Data de fabricação" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+        <Label x:Name="LabelDataDeVencimento" Content="Data de vencimento" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+        <Label x:Name="LabelQuantidadeDeProdutos" Content="Quantidade de produtos" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+        <Label x:Name="LabelCorredor" Content="Corredor" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Grid.Column="0"/>
+        <Label x:Name="LabelSecao" Content="Seção" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0"/>
+        <Label x:Name="LabelGaveta" Content="Gaveta" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0"/>
+        <Label x:Name="LabelEndereco" Content="Endereco" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0"/>
+        <Label x:Name="LabelProduto" Content="Produto" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="7" Grid.Column="0"/>
+
+        <DatePicker x:Name="DataDeFabricacao" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="0" VerticalAlignment="Center"/>
+        <DatePicker x:Name="DataDeVencimento" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center"/>
+
+        <TextBox x:Name="QuantidadeDeProdutos" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Height="24" VerticalAlignment="Center" Width="206" Margin="0,2,0,1"/>
+
+        <ComboBox x:Name="Corredor" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Height="24" VerticalAlignment="Center" Width="206" Margin="0,2,0,1">
+            <ComboBoxItem IsSelected="True">Corredor 1 </ComboBoxItem>
+            <ComboBoxItem >Corredor 2</ComboBoxItem>
+            <ComboBoxItem >Corredor 3</ComboBoxItem>
+            <ComboBoxItem >Corredor 4</ComboBoxItem>
+            <ComboBoxItem >Corredor 5</ComboBoxItem>
+            <ComboBoxItem >Corredor 6</ComboBoxItem>
+            <ComboBoxItem >Corredor 7</ComboBoxItem>
+            <ComboBoxItem >Corredor 8</ComboBoxItem>
+            <ComboBoxItem >Corredor 9</ComboBoxItem>
+            <ComboBoxItem >Corredor 10</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="Secao" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" Height="24" VerticalAlignment="Center" Width="206" Margin="0,2,0,1">
+            <ComboBoxItem IsSelected="True">Seção 1</ComboBoxItem>
+            <ComboBoxItem >Seção 2</ComboBoxItem>
+            <ComboBoxItem >Seção 3</ComboBoxItem>
+            <ComboBoxItem >Seção 4</ComboBoxItem>
+            <ComboBoxItem >Seção 5</ComboBoxItem>
+            <ComboBoxItem >Seção 6</ComboBoxItem>
+            <ComboBoxItem >Seção 7</ComboBoxItem>
+            <ComboBoxItem >Seção 8</ComboBoxItem>
+            <ComboBoxItem >Seção 9</ComboBoxItem>
+            <ComboBoxItem >Seção 10</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="Gaveta" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Height="24" VerticalAlignment="Center" Width="206" Margin="0,2,0,1">
+            <ComboBoxItem IsSelected="True">Gaveta 1</ComboBoxItem>
+            <ComboBoxItem >Gaveta 2</ComboBoxItem>
+            <ComboBoxItem >Gaveta 3</ComboBoxItem>
+            <ComboBoxItem >Gaveta 4</ComboBoxItem>
+            <ComboBoxItem >Gaveta 5</ComboBoxItem>
+            <ComboBoxItem >Gaveta 6</ComboBoxItem>
+            <ComboBoxItem >Gaveta 7</ComboBoxItem>
+            <ComboBoxItem >Gaveta 8</ComboBoxItem>
+            <ComboBoxItem >Gaveta 9</ComboBoxItem>
+            <ComboBoxItem >Gaveta 10</ComboBoxItem>
+        </ComboBox>
+
+        <ComboBox x:Name="Endereco" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center" Width="206" Margin="0,3,0,2"/>
+        <ComboBox x:Name="Produto" Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Width="206" Margin="0,2"/>
+
+        <Button x:Name="Cadastrar" Content="Cadastrar" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Margin="0,0,10,0" Click="Registrar"/>
+    </Grid>
+</Window>
